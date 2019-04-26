@@ -46,14 +46,61 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="FormArticle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormArticle.Designer.cs">
+      <DependentUpon>FormArticle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGroup.Designer.cs">
+      <DependentUpon>FormGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMachine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMachine.Designer.cs">
+      <DependentUpon>FormMachine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMachineByGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMachineByGroup.Designer.cs">
+      <DependentUpon>FormMachineByGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NomTaskDataSet.cs">
+      <DependentUpon>NomTaskDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="NomTaskDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NomTaskDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormArticle.resx">
+      <DependentUpon>FormArticle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGroup.resx">
+      <DependentUpon>FormGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMachine.resx">
+      <DependentUpon>FormMachine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMachineByGroup.resx">
+      <DependentUpon>FormMachineByGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -63,6 +110,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="NomTaskDataSet.xsc">
+      <DependentUpon>NomTaskDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="NomTaskDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NomTaskDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NomTaskDataSet.xss">
+      <DependentUpon>NomTaskDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
