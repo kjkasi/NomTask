@@ -126,5 +126,12 @@ namespace NomTask
             form.MdiParent = this;
             form.Show();
         }
+
+        private void RouteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormRoute form = new FormRoute();
+            form.MdiParent = this;
+            form.Show();
+        }
     }
 }

@@ -54,6 +54,7 @@
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.groupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.machineByGroupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.routeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -200,7 +201,8 @@
             this.articleToolStripMenuItem,
             this.machineToolStripMenuItem,
             this.groupToolStripMenuItem,
-            this.machineByGroupToolStripMenuItem});
+            this.machineByGroupToolStripMenuItem,
+            this.routeToolStripMenuItem});
             this.referenceToolStripMenuItem.Name = "referenceToolStripMenuItem";
             this.referenceToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.referenceToolStripMenuItem.Text = "Reference";
@@ -249,6 +251,13 @@
             this.machineByGroupToolStripMenuItem.Text = "MachineByGroup";
             this.machineByGroupToolStripMenuItem.Click += new System.EventHandler(this.MachineByGroupToolStripMenuItem_Click);
             // 
+            // routeToolStripMenuItem
+            // 
+            this.routeToolStripMenuItem.Name = "routeToolStripMenuItem";
+            this.routeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.routeToolStripMenuItem.Text = "Route";
+            this.routeToolStripMenuItem.Click += new System.EventHandler(this.RouteToolStripMenuItem_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -296,6 +305,7 @@
         private System.Windows.Forms.ToolStripMenuItem machineToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem groupToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem machineByGroupToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem routeToolStripMenuItem;
     }
 }
 

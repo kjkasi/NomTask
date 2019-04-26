@@ -188,6 +188,26 @@ SELECT Id, Name, Description FROM [Group] WHERE (Id = @Id)</CommandText>
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="RouteViewTableAdapter" GeneratorDataComponentClassName="RouteViewTableAdapter" Name="RouteView" UserDataComponentName="RouteViewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="NomTaskConnectionString (Settings)" DbObjectName="NomTask.dbo.RouteView" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Id, Article, NameArticle, [Group], NameGroup FROM dbo.RouteView</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Id" DataSetColumn="Id" />
+              <Mapping SourceColumn="Article" DataSetColumn="Article" />
+              <Mapping SourceColumn="NameArticle" DataSetColumn="NameArticle" />
+              <Mapping SourceColumn="Group" DataSetColumn="Group" />
+              <Mapping SourceColumn="NameGroup" DataSetColumn="NameGroup" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -196,7 +216,7 @@ SELECT Id, Name, Description FROM [Group] WHERE (Id = @Id)</CommandText>
   <xs:element name="NomTaskDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="NomTaskDataSet" msprop:Generator_UserDSName="NomTaskDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Article" msprop:Generator_TableClassName="ArticleDataTable" msprop:Generator_TableVarName="tableArticle" msprop:Generator_RowChangedName="ArticleRowChanged" msprop:Generator_TablePropName="Article" msprop:Generator_RowDeletingName="ArticleRowDeleting" msprop:Generator_RowChangingName="ArticleRowChanging" msprop:Generator_RowEvHandlerName="ArticleRowChangeEventHandler" msprop:Generator_RowDeletedName="ArticleRowDeleted" msprop:Generator_RowClassName="ArticleRow" msprop:Generator_UserTableName="Article" msprop:Generator_RowEvArgName="ArticleRowChangeEvent">
+        <xs:element name="Article" msprop:Generator_TableClassName="ArticleDataTable" msprop:Generator_TableVarName="tableArticle" msprop:Generator_TablePropName="Article" msprop:Generator_RowDeletingName="ArticleRowDeleting" msprop:Generator_RowChangingName="ArticleRowChanging" msprop:Generator_RowEvHandlerName="ArticleRowChangeEventHandler" msprop:Generator_RowDeletedName="ArticleRowDeleted" msprop:Generator_UserTableName="Article" msprop:Generator_RowChangedName="ArticleRowChanged" msprop:Generator_RowEvArgName="ArticleRowChangeEvent" msprop:Generator_RowClassName="ArticleRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -217,7 +237,7 @@ SELECT Id, Name, Description FROM [Group] WHERE (Id = @Id)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Machine" msprop:Generator_TableClassName="MachineDataTable" msprop:Generator_TableVarName="tableMachine" msprop:Generator_TablePropName="Machine" msprop:Generator_RowDeletingName="MachineRowDeleting" msprop:Generator_RowChangingName="MachineRowChanging" msprop:Generator_RowEvHandlerName="MachineRowChangeEventHandler" msprop:Generator_RowDeletedName="MachineRowDeleted" msprop:Generator_UserTableName="Machine" msprop:Generator_RowChangedName="MachineRowChanged" msprop:Generator_RowEvArgName="MachineRowChangeEvent" msprop:Generator_RowClassName="MachineRow">
+        <xs:element name="Machine" msprop:Generator_TableClassName="MachineDataTable" msprop:Generator_TableVarName="tableMachine" msprop:Generator_RowChangedName="MachineRowChanged" msprop:Generator_TablePropName="Machine" msprop:Generator_RowDeletingName="MachineRowDeleting" msprop:Generator_RowChangingName="MachineRowChanging" msprop:Generator_RowEvHandlerName="MachineRowChangeEventHandler" msprop:Generator_RowDeletedName="MachineRowDeleted" msprop:Generator_RowClassName="MachineRow" msprop:Generator_UserTableName="Machine" msprop:Generator_RowEvArgName="MachineRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -238,7 +258,7 @@ SELECT Id, Name, Description FROM [Group] WHERE (Id = @Id)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Group" msprop:Generator_TableClassName="GroupDataTable" msprop:Generator_TableVarName="tableGroup" msprop:Generator_RowChangedName="GroupRowChanged" msprop:Generator_TablePropName="Group" msprop:Generator_RowDeletingName="GroupRowDeleting" msprop:Generator_RowChangingName="GroupRowChanging" msprop:Generator_RowEvHandlerName="GroupRowChangeEventHandler" msprop:Generator_RowDeletedName="GroupRowDeleted" msprop:Generator_RowClassName="GroupRow" msprop:Generator_UserTableName="Group" msprop:Generator_RowEvArgName="GroupRowChangeEvent">
+        <xs:element name="Group" msprop:Generator_TableClassName="GroupDataTable" msprop:Generator_TableVarName="tableGroup" msprop:Generator_TablePropName="Group" msprop:Generator_RowDeletingName="GroupRowDeleting" msprop:Generator_RowChangingName="GroupRowChanging" msprop:Generator_RowEvHandlerName="GroupRowChangeEventHandler" msprop:Generator_RowDeletedName="GroupRowDeleted" msprop:Generator_UserTableName="Group" msprop:Generator_RowChangedName="GroupRowChanged" msprop:Generator_RowEvArgName="GroupRowChangeEvent" msprop:Generator_RowClassName="GroupRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
@@ -259,12 +279,35 @@ SELECT Id, Name, Description FROM [Group] WHERE (Id = @Id)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="MachineByGroupView" msprop:Generator_TableClassName="MachineByGroupViewDataTable" msprop:Generator_TableVarName="tableMachineByGroupView" msprop:Generator_TablePropName="MachineByGroupView" msprop:Generator_RowDeletingName="MachineByGroupViewRowDeleting" msprop:Generator_RowChangingName="MachineByGroupViewRowChanging" msprop:Generator_RowEvHandlerName="MachineByGroupViewRowChangeEventHandler" msprop:Generator_RowDeletedName="MachineByGroupViewRowDeleted" msprop:Generator_UserTableName="MachineByGroupView" msprop:Generator_RowChangedName="MachineByGroupViewRowChanged" msprop:Generator_RowEvArgName="MachineByGroupViewRowChangeEvent" msprop:Generator_RowClassName="MachineByGroupViewRow">
+        <xs:element name="MachineByGroupView" msprop:Generator_TableClassName="MachineByGroupViewDataTable" msprop:Generator_TableVarName="tableMachineByGroupView" msprop:Generator_RowChangedName="MachineByGroupViewRowChanged" msprop:Generator_TablePropName="MachineByGroupView" msprop:Generator_RowDeletingName="MachineByGroupViewRowDeleting" msprop:Generator_RowChangingName="MachineByGroupViewRowChanging" msprop:Generator_RowEvHandlerName="MachineByGroupViewRowChangeEventHandler" msprop:Generator_RowDeletedName="MachineByGroupViewRowDeleted" msprop:Generator_RowClassName="MachineByGroupViewRow" msprop:Generator_UserTableName="MachineByGroupView" msprop:Generator_RowEvArgName="MachineByGroupViewRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
               <xs:element name="Machine" msprop:Generator_ColumnVarNameInTable="columnMachine" msprop:Generator_ColumnPropNameInRow="Machine" msprop:Generator_ColumnPropNameInTable="MachineColumn" msprop:Generator_UserColumnName="Machine" type="xs:int" minOccurs="0" />
               <xs:element name="NameMachine" msprop:Generator_ColumnVarNameInTable="columnNameMachine" msprop:Generator_ColumnPropNameInRow="NameMachine" msprop:Generator_ColumnPropNameInTable="NameMachineColumn" msprop:Generator_UserColumnName="NameMachine" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Group" msprop:Generator_ColumnVarNameInTable="columnGroup" msprop:Generator_ColumnPropNameInRow="Group" msprop:Generator_ColumnPropNameInTable="GroupColumn" msprop:Generator_UserColumnName="Group" type="xs:int" minOccurs="0" />
+              <xs:element name="NameGroup" msprop:Generator_ColumnVarNameInTable="columnNameGroup" msprop:Generator_ColumnPropNameInRow="NameGroup" msprop:Generator_ColumnPropNameInTable="NameGroupColumn" msprop:Generator_UserColumnName="NameGroup" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="RouteView" msprop:Generator_TableClassName="RouteViewDataTable" msprop:Generator_TableVarName="tableRouteView" msprop:Generator_TablePropName="RouteView" msprop:Generator_RowDeletingName="RouteViewRowDeleting" msprop:Generator_RowChangingName="RouteViewRowChanging" msprop:Generator_RowEvHandlerName="RouteViewRowChangeEventHandler" msprop:Generator_RowDeletedName="RouteViewRowDeleted" msprop:Generator_UserTableName="RouteView" msprop:Generator_RowChangedName="RouteViewRowChanged" msprop:Generator_RowEvArgName="RouteViewRowChangeEvent" msprop:Generator_RowClassName="RouteViewRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
+              <xs:element name="Article" msprop:Generator_ColumnVarNameInTable="columnArticle" msprop:Generator_ColumnPropNameInRow="Article" msprop:Generator_ColumnPropNameInTable="ArticleColumn" msprop:Generator_UserColumnName="Article" type="xs:int" minOccurs="0" />
+              <xs:element name="NameArticle" msprop:Generator_ColumnVarNameInTable="columnNameArticle" msprop:Generator_ColumnPropNameInRow="NameArticle" msprop:Generator_ColumnPropNameInTable="NameArticleColumn" msprop:Generator_UserColumnName="NameArticle" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
@@ -298,6 +341,10 @@ SELECT Id, Name, Description FROM [Group] WHERE (Id = @Id)</CommandText>
     </xs:unique>
     <xs:unique name="MachineByGroupView_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:MachineByGroupView" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+    <xs:unique name="RouteView_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:RouteView" />
       <xs:field xpath="mstns:Id" />
     </xs:unique>
   </xs:element>
