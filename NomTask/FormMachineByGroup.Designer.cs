@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.nomTaskDataSet = new NomTask.NomTaskDataSet();
             this.machineByGroupViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nomTaskDataSet = new NomTask.NomTaskDataSet();
             this.machineByGroupViewTableAdapter = new NomTask.NomTaskDataSetTableAdapters.MachineByGroupViewTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.machineDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,8 +39,8 @@
             this.groupDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameGroupDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nomTaskDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.machineByGroupViewBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nomTaskDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -60,15 +60,15 @@
             this.dataGridView1.Size = new System.Drawing.Size(800, 450);
             this.dataGridView1.TabIndex = 0;
             // 
-            // nomTaskDataSet
-            // 
-            this.nomTaskDataSet.DataSetName = "NomTaskDataSet";
-            this.nomTaskDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // machineByGroupViewBindingSource
             // 
             this.machineByGroupViewBindingSource.DataMember = "MachineByGroupView";
             this.machineByGroupViewBindingSource.DataSource = this.nomTaskDataSet;
+            // 
+            // nomTaskDataSet
+            // 
+            this.nomTaskDataSet.DataSetName = "NomTaskDataSet";
+            this.nomTaskDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // machineByGroupViewTableAdapter
             // 
@@ -77,7 +77,7 @@
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Номер";
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             // 
             // machineDataGridViewTextBoxColumn
@@ -85,11 +85,12 @@
             this.machineDataGridViewTextBoxColumn.DataPropertyName = "Machine";
             this.machineDataGridViewTextBoxColumn.HeaderText = "Machine";
             this.machineDataGridViewTextBoxColumn.Name = "machineDataGridViewTextBoxColumn";
+            this.machineDataGridViewTextBoxColumn.Visible = false;
             // 
             // nameMachineDataGridViewTextBoxColumn
             // 
             this.nameMachineDataGridViewTextBoxColumn.DataPropertyName = "NameMachine";
-            this.nameMachineDataGridViewTextBoxColumn.HeaderText = "NameMachine";
+            this.nameMachineDataGridViewTextBoxColumn.HeaderText = "Станок";
             this.nameMachineDataGridViewTextBoxColumn.Name = "nameMachineDataGridViewTextBoxColumn";
             // 
             // groupDataGridViewTextBoxColumn
@@ -97,11 +98,12 @@
             this.groupDataGridViewTextBoxColumn.DataPropertyName = "Group";
             this.groupDataGridViewTextBoxColumn.HeaderText = "Group";
             this.groupDataGridViewTextBoxColumn.Name = "groupDataGridViewTextBoxColumn";
+            this.groupDataGridViewTextBoxColumn.Visible = false;
             // 
             // nameGroupDataGridViewTextBoxColumn
             // 
             this.nameGroupDataGridViewTextBoxColumn.DataPropertyName = "NameGroup";
-            this.nameGroupDataGridViewTextBoxColumn.HeaderText = "NameGroup";
+            this.nameGroupDataGridViewTextBoxColumn.HeaderText = "Группа";
             this.nameGroupDataGridViewTextBoxColumn.Name = "nameGroupDataGridViewTextBoxColumn";
             // 
             // FormMachineByGroup
@@ -111,12 +113,12 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dataGridView1);
             this.Name = "FormMachineByGroup";
-            this.Text = "FormMachineByGroup";
+            this.Text = "Группы станков";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormMachineByGroup_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nomTaskDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.machineByGroupViewBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nomTaskDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }

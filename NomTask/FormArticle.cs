@@ -22,5 +22,10 @@ namespace NomTask
             // TODO: данная строка кода позволяет загрузить данные в таблицу "nomTaskDataSet.Article". При необходимости она может быть перемещена или удалена.
             this.articleTableAdapter.Fill(this.nomTaskDataSet.Article);
         }
+
+        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.nomTaskDataSet = new NomTask.NomTaskDataSet();
             this.routeViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nomTaskDataSet = new NomTask.NomTaskDataSet();
             this.routeViewTableAdapter = new NomTask.NomTaskDataSetTableAdapters.RouteViewTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.articleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,8 +39,8 @@
             this.groupDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameGroupDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nomTaskDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.routeViewBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nomTaskDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -60,15 +60,15 @@
             this.dataGridView1.Size = new System.Drawing.Size(800, 450);
             this.dataGridView1.TabIndex = 0;
             // 
-            // nomTaskDataSet
-            // 
-            this.nomTaskDataSet.DataSetName = "NomTaskDataSet";
-            this.nomTaskDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // routeViewBindingSource
             // 
             this.routeViewBindingSource.DataMember = "RouteView";
             this.routeViewBindingSource.DataSource = this.nomTaskDataSet;
+            // 
+            // nomTaskDataSet
+            // 
+            this.nomTaskDataSet.DataSetName = "NomTaskDataSet";
+            this.nomTaskDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // routeViewTableAdapter
             // 
@@ -77,7 +77,7 @@
             // idDataGridViewTextBoxColumn
             // 
             this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Номер";
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             // 
             // articleDataGridViewTextBoxColumn
@@ -85,11 +85,12 @@
             this.articleDataGridViewTextBoxColumn.DataPropertyName = "Article";
             this.articleDataGridViewTextBoxColumn.HeaderText = "Article";
             this.articleDataGridViewTextBoxColumn.Name = "articleDataGridViewTextBoxColumn";
+            this.articleDataGridViewTextBoxColumn.Visible = false;
             // 
             // nameArticleDataGridViewTextBoxColumn
             // 
             this.nameArticleDataGridViewTextBoxColumn.DataPropertyName = "NameArticle";
-            this.nameArticleDataGridViewTextBoxColumn.HeaderText = "NameArticle";
+            this.nameArticleDataGridViewTextBoxColumn.HeaderText = "ДСЕ";
             this.nameArticleDataGridViewTextBoxColumn.Name = "nameArticleDataGridViewTextBoxColumn";
             // 
             // groupDataGridViewTextBoxColumn
@@ -97,11 +98,12 @@
             this.groupDataGridViewTextBoxColumn.DataPropertyName = "Group";
             this.groupDataGridViewTextBoxColumn.HeaderText = "Group";
             this.groupDataGridViewTextBoxColumn.Name = "groupDataGridViewTextBoxColumn";
+            this.groupDataGridViewTextBoxColumn.Visible = false;
             // 
             // nameGroupDataGridViewTextBoxColumn
             // 
             this.nameGroupDataGridViewTextBoxColumn.DataPropertyName = "NameGroup";
-            this.nameGroupDataGridViewTextBoxColumn.HeaderText = "NameGroup";
+            this.nameGroupDataGridViewTextBoxColumn.HeaderText = "Группы";
             this.nameGroupDataGridViewTextBoxColumn.Name = "nameGroupDataGridViewTextBoxColumn";
             // 
             // FormRoute
@@ -111,11 +113,11 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dataGridView1);
             this.Name = "FormRoute";
-            this.Text = "FormRoute";
+            this.Text = "Маршруты изготовления";
             this.Load += new System.EventHandler(this.FormRoute_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nomTaskDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.routeViewBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nomTaskDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }

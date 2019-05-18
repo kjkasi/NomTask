@@ -31,8 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.fileMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.Result = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewMenu = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,12 +48,12 @@
             this.referenceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.articleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.machineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.statusStrip = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.groupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.machineByGroupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.routeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusStrip = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -77,8 +76,7 @@
             // fileMenu
             // 
             this.fileMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripSeparator3,
-            this.toolStripSeparator4,
+            this.Result,
             this.toolStripSeparator5,
             this.exitToolStripMenuItem});
             this.fileMenu.ImageTransparentColor = System.Drawing.SystemColors.ActiveBorder;
@@ -86,25 +84,22 @@
             this.fileMenu.Size = new System.Drawing.Size(48, 20);
             this.fileMenu.Text = "&Файл";
             // 
-            // toolStripSeparator3
+            // Result
             // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(105, 6);
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(105, 6);
+            this.Result.Name = "Result";
+            this.Result.Size = new System.Drawing.Size(180, 22);
+            this.Result.Text = "Рассчитать";
+            this.Result.Click += new System.EventHandler(this.Result_Click);
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(105, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(177, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "В&ыход";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolsStripMenuItem_Click);
             // 
@@ -204,22 +199,43 @@
             this.machineByGroupToolStripMenuItem,
             this.routeToolStripMenuItem});
             this.referenceToolStripMenuItem.Name = "referenceToolStripMenuItem";
-            this.referenceToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
-            this.referenceToolStripMenuItem.Text = "Reference";
+            this.referenceToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
+            this.referenceToolStripMenuItem.Text = "Справочники";
             // 
             // articleToolStripMenuItem
             // 
             this.articleToolStripMenuItem.Name = "articleToolStripMenuItem";
-            this.articleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.articleToolStripMenuItem.Text = "Article";
+            this.articleToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
+            this.articleToolStripMenuItem.Text = "ДСЕ";
             this.articleToolStripMenuItem.Click += new System.EventHandler(this.ArticleToolStripMenuItem_Click);
             // 
             // machineToolStripMenuItem
             // 
             this.machineToolStripMenuItem.Name = "machineToolStripMenuItem";
-            this.machineToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.machineToolStripMenuItem.Text = "Machine";
+            this.machineToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
+            this.machineToolStripMenuItem.Text = "Станки";
             this.machineToolStripMenuItem.Click += new System.EventHandler(this.MachineToolStripMenuItem_Click);
+            // 
+            // groupToolStripMenuItem
+            // 
+            this.groupToolStripMenuItem.Name = "groupToolStripMenuItem";
+            this.groupToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
+            this.groupToolStripMenuItem.Text = "Группы";
+            this.groupToolStripMenuItem.Click += new System.EventHandler(this.GroupToolStripMenuItem_Click);
+            // 
+            // machineByGroupToolStripMenuItem
+            // 
+            this.machineByGroupToolStripMenuItem.Name = "machineByGroupToolStripMenuItem";
+            this.machineByGroupToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
+            this.machineByGroupToolStripMenuItem.Text = "Группы станков";
+            this.machineByGroupToolStripMenuItem.Click += new System.EventHandler(this.MachineByGroupToolStripMenuItem_Click);
+            // 
+            // routeToolStripMenuItem
+            // 
+            this.routeToolStripMenuItem.Name = "routeToolStripMenuItem";
+            this.routeToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
+            this.routeToolStripMenuItem.Text = "Маршруты изготовления";
+            this.routeToolStripMenuItem.Click += new System.EventHandler(this.RouteToolStripMenuItem_Click);
             // 
             // statusStrip
             // 
@@ -237,27 +253,6 @@
             this.toolStripStatusLabel.Size = new System.Drawing.Size(66, 17);
             this.toolStripStatusLabel.Text = "Состояние";
             // 
-            // groupToolStripMenuItem
-            // 
-            this.groupToolStripMenuItem.Name = "groupToolStripMenuItem";
-            this.groupToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.groupToolStripMenuItem.Text = "Group";
-            this.groupToolStripMenuItem.Click += new System.EventHandler(this.GroupToolStripMenuItem_Click);
-            // 
-            // machineByGroupToolStripMenuItem
-            // 
-            this.machineByGroupToolStripMenuItem.Name = "machineByGroupToolStripMenuItem";
-            this.machineByGroupToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.machineByGroupToolStripMenuItem.Text = "MachineByGroup";
-            this.machineByGroupToolStripMenuItem.Click += new System.EventHandler(this.MachineByGroupToolStripMenuItem_Click);
-            // 
-            // routeToolStripMenuItem
-            // 
-            this.routeToolStripMenuItem.Name = "routeToolStripMenuItem";
-            this.routeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.routeToolStripMenuItem.Text = "Route";
-            this.routeToolStripMenuItem.Click += new System.EventHandler(this.RouteToolStripMenuItem_Click);
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -268,7 +263,7 @@
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip;
             this.Name = "FormMain";
-            this.Text = "FormMain";
+            this.Text = "Расчет номенклатурного задания";
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.statusStrip.ResumeLayout(false);
@@ -282,8 +277,6 @@
 
         private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.StatusStrip statusStrip;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel;
         private System.Windows.Forms.ToolStripMenuItem tileHorizontalToolStripMenuItem;
@@ -306,6 +299,7 @@
         private System.Windows.Forms.ToolStripMenuItem groupToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem machineByGroupToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem routeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem Result;
     }
 }
 

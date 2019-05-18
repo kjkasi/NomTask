@@ -133,5 +133,12 @@ namespace NomTask
             form.MdiParent = this;
             form.Show();
         }
+
+        private void Result_Click(object sender, EventArgs e)
+        {
+            FormResult form = new FormResult();
+            form.MdiParent = this;
+            form.Show();
+        }
     }
 }
