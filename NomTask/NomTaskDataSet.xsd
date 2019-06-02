@@ -208,6 +208,48 @@ SELECT Id, Name, Description FROM [Group] WHERE (Id = @Id)</CommandText>
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TimeViewTableAdapter" GeneratorDataComponentClassName="TimeViewTableAdapter" Name="TimeView" UserDataComponentName="TimeViewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="NomTaskConnectionString (Settings)" DbObjectName="NomTask.dbo.TimeView" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Id, Article, NameArticle, [Group], NameGroup, ProcessTime, ProduceTime FROM dbo.TimeView</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Id" DataSetColumn="Id" />
+              <Mapping SourceColumn="Article" DataSetColumn="Article" />
+              <Mapping SourceColumn="NameArticle" DataSetColumn="NameArticle" />
+              <Mapping SourceColumn="Group" DataSetColumn="Group" />
+              <Mapping SourceColumn="NameGroup" DataSetColumn="NameGroup" />
+              <Mapping SourceColumn="ProcessTime" DataSetColumn="ProcessTime" />
+              <Mapping SourceColumn="ProduceTime" DataSetColumn="ProduceTime" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PlanViewTableAdapter" GeneratorDataComponentClassName="PlanViewTableAdapter" Name="PlanView" UserDataComponentName="PlanViewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="NomTaskConnectionString (Settings)" DbObjectName="NomTask.dbo.PlanView" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Id, Article, Name, Day, Count FROM dbo.PlanView</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Id" DataSetColumn="Id" />
+              <Mapping SourceColumn="Article" DataSetColumn="Article" />
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+              <Mapping SourceColumn="Day" DataSetColumn="Day" />
+              <Mapping SourceColumn="Count" DataSetColumn="Count" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -325,6 +367,48 @@ SELECT Id, Name, Description FROM [Group] WHERE (Id = @Id)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="TimeView" msprop:Generator_TableClassName="TimeViewDataTable" msprop:Generator_TableVarName="tableTimeView" msprop:Generator_RowChangedName="TimeViewRowChanged" msprop:Generator_TablePropName="TimeView" msprop:Generator_RowDeletingName="TimeViewRowDeleting" msprop:Generator_RowChangingName="TimeViewRowChanging" msprop:Generator_RowEvHandlerName="TimeViewRowChangeEventHandler" msprop:Generator_RowDeletedName="TimeViewRowDeleted" msprop:Generator_RowClassName="TimeViewRow" msprop:Generator_UserTableName="TimeView" msprop:Generator_RowEvArgName="TimeViewRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
+              <xs:element name="Article" msprop:Generator_ColumnVarNameInTable="columnArticle" msprop:Generator_ColumnPropNameInRow="Article" msprop:Generator_ColumnPropNameInTable="ArticleColumn" msprop:Generator_UserColumnName="Article" type="xs:int" minOccurs="0" />
+              <xs:element name="NameArticle" msprop:Generator_ColumnVarNameInTable="columnNameArticle" msprop:Generator_ColumnPropNameInRow="NameArticle" msprop:Generator_ColumnPropNameInTable="NameArticleColumn" msprop:Generator_UserColumnName="NameArticle" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Group" msprop:Generator_ColumnVarNameInTable="columnGroup" msprop:Generator_ColumnPropNameInRow="Group" msprop:Generator_ColumnPropNameInTable="GroupColumn" msprop:Generator_UserColumnName="Group" type="xs:int" minOccurs="0" />
+              <xs:element name="NameGroup" msprop:Generator_ColumnVarNameInTable="columnNameGroup" msprop:Generator_ColumnPropNameInRow="NameGroup" msprop:Generator_ColumnPropNameInTable="NameGroupColumn" msprop:Generator_UserColumnName="NameGroup" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProcessTime" msprop:Generator_ColumnVarNameInTable="columnProcessTime" msprop:Generator_ColumnPropNameInRow="ProcessTime" msprop:Generator_ColumnPropNameInTable="ProcessTimeColumn" msprop:Generator_UserColumnName="ProcessTime" type="xs:double" minOccurs="0" />
+              <xs:element name="ProduceTime" msprop:Generator_ColumnVarNameInTable="columnProduceTime" msprop:Generator_ColumnPropNameInRow="ProduceTime" msprop:Generator_ColumnPropNameInTable="ProduceTimeColumn" msprop:Generator_UserColumnName="ProduceTime" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PlanView" msprop:Generator_TableClassName="PlanViewDataTable" msprop:Generator_TableVarName="tablePlanView" msprop:Generator_TablePropName="PlanView" msprop:Generator_RowDeletingName="PlanViewRowDeleting" msprop:Generator_RowChangingName="PlanViewRowChanging" msprop:Generator_RowEvHandlerName="PlanViewRowChangeEventHandler" msprop:Generator_RowDeletedName="PlanViewRowDeleted" msprop:Generator_UserTableName="PlanView" msprop:Generator_RowChangedName="PlanViewRowChanged" msprop:Generator_RowEvArgName="PlanViewRowChangeEvent" msprop:Generator_RowClassName="PlanViewRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:int" />
+              <xs:element name="Article" msprop:Generator_ColumnVarNameInTable="columnArticle" msprop:Generator_ColumnPropNameInRow="Article" msprop:Generator_ColumnPropNameInTable="ArticleColumn" msprop:Generator_UserColumnName="Article" type="xs:int" minOccurs="0" />
+              <xs:element name="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_UserColumnName="Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Day" msprop:Generator_ColumnVarNameInTable="columnDay" msprop:Generator_ColumnPropNameInRow="Day" msprop:Generator_ColumnPropNameInTable="DayColumn" msprop:Generator_UserColumnName="Day" type="xs:int" minOccurs="0" />
+              <xs:element name="Count" msprop:Generator_ColumnVarNameInTable="columnCount" msprop:Generator_ColumnPropNameInRow="Count" msprop:Generator_ColumnPropNameInTable="CountColumn" msprop:Generator_UserColumnName="Count" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -345,6 +429,14 @@ SELECT Id, Name, Description FROM [Group] WHERE (Id = @Id)</CommandText>
     </xs:unique>
     <xs:unique name="RouteView_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:RouteView" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+    <xs:unique name="TimeView_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:TimeView" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
+    <xs:unique name="PlanView_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:PlanView" />
       <xs:field xpath="mstns:Id" />
     </xs:unique>
   </xs:element>

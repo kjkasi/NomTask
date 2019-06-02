@@ -76,6 +76,12 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPlan.Designer.cs">
+      <DependentUpon>FormPlan.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormResult.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +93,12 @@
     </Compile>
     <Compile Include="FormRoute.Designer.cs">
       <DependentUpon>FormRoute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTime.Designer.cs">
+      <DependentUpon>FormTime.cs</DependentUpon>
     </Compile>
     <Compile Include="NomTaskDataSet.cs">
       <DependentUpon>NomTaskDataSet.xsd</DependentUpon>
@@ -113,11 +125,17 @@
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormPlan.resx">
+      <DependentUpon>FormPlan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormResult.resx">
       <DependentUpon>FormResult.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormRoute.resx">
       <DependentUpon>FormRoute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTime.resx">
+      <DependentUpon>FormTime.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

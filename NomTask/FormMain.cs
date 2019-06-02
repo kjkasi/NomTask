@@ -140,5 +140,19 @@ namespace NomTask
             form.MdiParent = this;
             form.Show();
         }
+
+        private void TimeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormTime form = new FormTime();
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void PlanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormPlan form = new FormPlan();
+            form.MdiParent = this;
+            form.Show();
+        }
     }
 }
