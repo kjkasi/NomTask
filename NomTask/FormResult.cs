@@ -16,5 +16,10 @@ namespace NomTask
         {
             InitializeComponent();
         }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = resultTableAdapter.GetData(Int32.Parse(comboBox1.Text));
+        }
     }
 }
