@@ -1,4 +1,18 @@
-﻿CREATE PROCEDURE [dbo].[Result]
+﻿USE [NomTask]
+GO
+
+/****** Объект: SqlProcedure [dbo].[Result] Дата скрипта: 08.06.2019 15:34:30 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+DROP PROCEDURE [dbo].[Result];
+
+
+GO
+CREATE PROCEDURE [dbo].[Result]
 	@ShiftCount int = 1
 AS
 BEGIN
@@ -67,7 +81,7 @@ BEGIN
 	WHERE R.Article IN	(
 									SELECT ARTICLE
 									FROM @COMPARE_RESULT
-									WHERE FACT > [PLAN]
+									WHERE FACT >= [PLAN]
 						)
 
 	DECLARE @ABM_RESULT2 TABLE (ARTICLE INT, [GROUP] INT, MACHINE INT, CNT INT) 
@@ -99,7 +113,7 @@ BEGIN
 	WHERE NP.Article IN	(
 									SELECT ARTICLE
 									FROM @COMPARE_RESULT
-									WHERE FACT > [PLAN]
+									WHERE FACT >= [PLAN]
 						)
 
 	DELETE FROM @TASK_TABLE

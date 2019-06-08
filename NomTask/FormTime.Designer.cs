@@ -30,12 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.routeViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.nomTaskDataSet = new NomTask.NomTaskDataSet();
             this.nomTaskDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nomTaskDataSet = new NomTask.NomTaskDataSet();
             this.routeViewTableAdapter = new NomTask.NomTaskDataSetTableAdapters.RouteViewTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.timeViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.timeViewTableAdapter = new NomTask.NomTaskDataSetTableAdapters.TimeViewTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.articleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameArticleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,9 +41,11 @@
             this.nameGroupDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.processTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.produceTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timeViewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.timeViewTableAdapter = new NomTask.NomTaskDataSetTableAdapters.TimeViewTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.routeViewBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nomTaskDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nomTaskDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nomTaskDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.timeViewBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -55,15 +55,15 @@
             this.routeViewBindingSource.DataMember = "RouteView";
             this.routeViewBindingSource.DataSource = this.nomTaskDataSetBindingSource;
             // 
-            // nomTaskDataSet
-            // 
-            this.nomTaskDataSet.DataSetName = "NomTaskDataSet";
-            this.nomTaskDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // nomTaskDataSetBindingSource
             // 
             this.nomTaskDataSetBindingSource.DataSource = this.nomTaskDataSet;
             this.nomTaskDataSetBindingSource.Position = 0;
+            // 
+            // nomTaskDataSet
+            // 
+            this.nomTaskDataSet.DataSetName = "NomTaskDataSet";
+            this.nomTaskDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // routeViewTableAdapter
             // 
@@ -87,15 +87,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(800, 450);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // timeViewBindingSource
-            // 
-            this.timeViewBindingSource.DataMember = "TimeView";
-            this.timeViewBindingSource.DataSource = this.nomTaskDataSetBindingSource;
-            // 
-            // timeViewTableAdapter
-            // 
-            this.timeViewTableAdapter.ClearBeforeFill = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -141,6 +132,15 @@
             this.produceTimeDataGridViewTextBoxColumn.HeaderText = "ПЗ";
             this.produceTimeDataGridViewTextBoxColumn.Name = "produceTimeDataGridViewTextBoxColumn";
             // 
+            // timeViewBindingSource
+            // 
+            this.timeViewBindingSource.DataMember = "TimeView";
+            this.timeViewBindingSource.DataSource = this.nomTaskDataSetBindingSource;
+            // 
+            // timeViewTableAdapter
+            // 
+            this.timeViewTableAdapter.ClearBeforeFill = true;
+            // 
             // FormTime
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -148,12 +148,12 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dataGridView1);
             this.Name = "FormTime";
-            this.Text = "FormTime";
+            this.Text = "Время изготовления";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormTime_Load);
             ((System.ComponentModel.ISupportInitialize)(this.routeViewBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nomTaskDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nomTaskDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nomTaskDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.timeViewBindingSource)).EndInit();
             this.ResumeLayout(false);

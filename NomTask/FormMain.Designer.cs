@@ -52,10 +52,10 @@
             this.machineByGroupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.routeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.planToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.planToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -89,8 +89,8 @@
             // Result
             // 
             this.Result.Name = "Result";
-            this.Result.Size = new System.Drawing.Size(135, 22);
-            this.Result.Text = "Рассчитать";
+            this.Result.Size = new System.Drawing.Size(181, 22);
+            this.Result.Text = "Рассчитать задание";
             this.Result.Click += new System.EventHandler(this.Result_Click);
             // 
             // toolStripSeparator5
@@ -245,8 +245,15 @@
             // 
             this.timeToolStripMenuItem.Name = "timeToolStripMenuItem";
             this.timeToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
-            this.timeToolStripMenuItem.Text = "Time";
+            this.timeToolStripMenuItem.Text = "Время изготовления";
             this.timeToolStripMenuItem.Click += new System.EventHandler(this.TimeToolStripMenuItem_Click);
+            // 
+            // planToolStripMenuItem
+            // 
+            this.planToolStripMenuItem.Name = "planToolStripMenuItem";
+            this.planToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
+            this.planToolStripMenuItem.Text = "План производства";
+            this.planToolStripMenuItem.Click += new System.EventHandler(this.PlanToolStripMenuItem_Click);
             // 
             // statusStrip
             // 
@@ -263,13 +270,6 @@
             this.toolStripStatusLabel.Name = "toolStripStatusLabel";
             this.toolStripStatusLabel.Size = new System.Drawing.Size(66, 17);
             this.toolStripStatusLabel.Text = "Состояние";
-            // 
-            // planToolStripMenuItem
-            // 
-            this.planToolStripMenuItem.Name = "planToolStripMenuItem";
-            this.planToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
-            this.planToolStripMenuItem.Text = "Plan";
-            this.planToolStripMenuItem.Click += new System.EventHandler(this.PlanToolStripMenuItem_Click);
             // 
             // FormMain
             // 
